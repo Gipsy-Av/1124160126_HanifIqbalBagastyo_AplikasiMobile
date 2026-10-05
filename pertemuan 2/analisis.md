@@ -1,5 +1,3 @@
-BAGIAN A — DOKUMEN ANALISIS
-
 1. Problem Statement
 Sistem perpustakaan memerlukan modul pengelolaan peminjaman dan pengembalian buku yang terintegrasi. Sistem harus mampu memvalidasi identitas anggota, mengecek ketersediaan stok buku, membatasi kuota pinjaman aktif, serta menghitung denda keterlambatan secara otomatis berdasarkan durasi peminjaman.
 
