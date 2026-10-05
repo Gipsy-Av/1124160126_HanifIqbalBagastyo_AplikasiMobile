@@ -37,6 +37,7 @@ Sistem perpustakaan memerlukan modul pengelolaan peminjaman dan pengembalian buk
 
 7. Pseudocode
 
+```
 PROCEDURE pinjamBuku(idMahasiswa, idBuku, tglPinjam)
     mhs = cariMahasiswa(idMahasiswa)
     IF mhs IS NULL THEN
