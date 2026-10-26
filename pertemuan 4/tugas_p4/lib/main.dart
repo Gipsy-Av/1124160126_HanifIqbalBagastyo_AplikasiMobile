@@ -12,46 +12,48 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Aplikasi Mahasiswa',
       debugShowCheckedModeBanner: false,
-      
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.indigo,
+          seedColor: Colors.green,
         ),
         useMaterial3: true,
       ),
-      
-      home: const HomePage(),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.green,
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+      ),
+      themeMode: ThemeMode.system,
+      home: const ProfilePage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Dashboard Mahasiswa'),
-        backgroundColor: Colors.indigo,
-        foregroundColor: Colors.white,
         actions: [
           IconButton(
-            onPressed: () {
-              print('Pencarian diklik');
-            },
+            onPressed: () {},
             icon: const Icon(Icons.search),
           ),
         ],
       ),
-      
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.indigo,
+                color: Colors.green,
               ),
               child: Text(
                 'Menu Kampus',
@@ -64,21 +66,16 @@ class HomePage extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.home),
               title: const Text('Dashboard'),
-              onTap: () {
-                print('Dashboard diklik');
-              },
+              onTap: () {},
             ),
             ListTile(
               leading: const Icon(Icons.people),
               title: const Text('Mahasiswa'),
-              onTap: () {
-                print('Mahasiswa diklik');
-              },
+              onTap: () {},
             ),
           ],
         ),
       ),
-      
       body: const Center(
         child: Text(
           'Hanif Iqbal Bagastyo\n1124160126',
@@ -89,13 +86,8 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print('Tombol tambah ditekan');
-        },
-        backgroundColor: Colors.indigo,
-        foregroundColor: Colors.white,
+        onPressed: () {},
         child: const Icon(Icons.add),
       ),
     );
